@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redes Informáticas</title>
+  <link rel="stylesheet" href="styleproyecto.css">
+</head>
+<body>
+  <header>
+    <h2>Redes Informáticas</h2>
+    <nav>
+      <ul>
+        <li><a href="inicio.html">Inicio</a></li>
+        <li><a href="que_es.html">¿Qué es una red?</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="modelos.html">OSI y TCP/IP</a></li>
+        <li><a href="tipos.html">Tipos</a></li>
+        <li><a href="topologias.html">Topologías</a></li>
+        <li><a href="componentes.html">Componentes</a></li>
+        <li><a href="Medios.html">Medios de transmisión</a></li>
+        <li><a href="direccionamiento.html">Direccionamiento IP</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="col1">
+    <p>
+<h1>Direccionamiento IP</h1>
+  <section id="direccionamiento">
+
+  <p>Para que dos sistemas se comuniquen en una red, deben poder identificarse y localizarse entre sí. Esto se logra a través del uso de direcciones únicas. Aunque algunos ejemplos no reflejan direcciones reales, representan el concepto de agrupamiento: se utiliza una parte para identificar la red y otra para identificar al host.</p>
+
+  <p>Un equipo puede estar conectado a más de una red, por lo que necesitará más de una dirección IP, una para cada conexión (o interfaz). Esto permite que otros dispositivos localicen ese equipo en diferentes redes.</p>
+
+  <p>Una dirección IP opera en la Capa 3 del modelo OSI y está compuesta por 32 bits (IPv4). Por facilidad, se escribe en formato decimal punteado, dividido en cuatro octetos (por ejemplo: 192.168.1.2). Cada octeto puede tomar un valor de 0 a 255.</p>
+
+  <p>Este formato facilita la lectura y reduce los errores, comparado con largas cadenas binarias. Por ejemplo, es más claro diferenciar 192.168.1.8 de 192.168.1.9 que sus equivalentes binarios.</p>
+
+  <h3>IPv4 - Direccionamiento</h3>
+
+  <p>En IPv4, cada dirección IP consta de dos partes: una que identifica la red y otra que identifica el host. Esto es comparable con una carta postal: primero se dirige a la ciudad (la red), y luego al domicilio específico (el host).</p>
+  
+  <p>Las direcciones IP se clasifican en clases para facilitar su organización:</p>
+  <ul>
+    <li><strong>Clase A:</strong> <p>Primer bit es 0. Rango del primer octeto: 1 a 126. Grandes redes.</p></li>
+    <li><strong>Clase B:</strong> <p>Comienza con 10. Rango: 128 a 191. Redes medianas.</p></li>
+    <li><strong>Clase C:</strong> <p>Comienza con 110. Rango: 192 a 223. Redes pequeñas.</p></li>
+    <li><strong>Clase D:</strong> <p>Comienza con 1110. Rango: 224 a 239. Uso para multicast.</p></li>
+    <li><strong>Clase E:</strong> <p>Comienza con 1111. Rango: 240 a 255. Reservada para investigación.</p></li>
+  </ul>
+
+  <p>La dirección <strong>127.0.0.1</strong> está reservada para pruebas internas (loopback).</p>
+
+  <h3>Direcciones MAC</h3>
+  <p>Todos los dispositivos de red tienen una dirección MAC única, asignada por el fabricante. Estas operan en la Capa 2 del modelo OSI y permiten identificar físicamente cada dispositivo.</p>
+  <img src="img/mac.png" alt="Dirección MAC" width="450px" height="200px">
+
+
+  <h3>Notación Binaria vs Decimal</h3>
+  <p>Una dirección IP como 192.168.1.8 en binario se representa como:<br>
+    11000000.10101000.00000001.00001000<br>
+    Pero es más fácil identificar patrones y evitar errores usando la forma decimal.</p>
+    <img src="img/ivp4.jpeg" alt="Notación binaria y decimal de IPv4" width="450px" height="200px">
+
+  <h3>Subnetting (Subredes)</h3>
+  <p>El subnetting permite dividir una red grande en subredes más pequeñas. Esto mejora la eficiencia, la seguridad y la organización interna. Para ello se usan máscaras de subred como 255.255.255.0.</p>
+  <img src="img/ej.png" alt="Ejemplo de subnetting" width="450px" height="200px">
+  <p>El número de subredes disponibles depende de cuántos bits se reserven para la parte de red. Esto permite crear jerarquías internas dentro de grandes organizaciones.</p>
+
+  <h3>CIDR (Classless Inter-Domain Routing)</h3>
+  <p>CIDR elimina la limitación del direccionamiento por clases, permitiendo definir bloques de direcciones más flexibles. Se usa la notación: <code>192.168.1.0/24</code>, donde /24 indica cuántos bits corresponden a la red.</p>
+  <img src="img/ej2.png" alt="Ejemplo de CIDR" width="450px" height="200px">
+
+  <h3>IPv6 - Direccionamiento</h3>
+  <p>IPv6 es la evolución de IPv4 y permite una cantidad prácticamente ilimitada de direcciones. Su formato de 128 bits soporta <strong>340 sextillones de direcciones</strong>, lo que resuelve la escasez de IPv4.</p>
+  <img src="img/ipv6.webp" alt="Dirección IPv6" width="450px" height="200px">
+
+  <p>IPv6 fue adoptado por la IETF en 1994 y también se conoce como IPng. Aunque fue diseñado con seguridad mejorada, su adopción aún está en curso. Se utilizan firewalls y otras herramientas modernas para proteger redes IPv6.</p>
+
+  <h3>Comparación IPv4 vs IPv6</h3>
+<table border="1" cellpadding="10" cellspacing="0" style="border-collapse: collapse; width: 100%; text-align: left;">
+  <thead style="background-color: #f2f2f2;">
+    <tr>
+      <th>Característica</th>
+      <th>IPv4</th>
+      <th>IPv6</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Longitud</td>
+      <td>32 bits (4.294 millones de direcciones posibles)</td>
+      <td>128 bits (340 sextillones de direcciones posibles)</td>
+    </tr>
+    <tr>
+      <td>Notación</td>
+      <td>Decimal (ej. 192.168.0.1)</td>
+      <td>Hexadecimal (ej. 2001:0db8:85a3::8a2e:0370:7334)</td>
+    </tr>
+    <tr>
+      <td>Uso de NAT</td>
+      <td>Puede usar NAT para compartir una IP</td>
+      <td>No necesita NAT gracias al amplio espacio de direcciones</td>
+    </tr>
+  </tbody>
+</table>
+  <p>IPv6 está compuesto por dos partes: el prefijo de red (64 bits) y el identificador de interfaz (64 bits), que a menudo se genera desde la dirección MAC del dispositivo.</p>
+
+  <p>IPv4 sigue siendo ampliamente usado, pero con la expansión de internet y el crecimiento de dispositivos conectados, el futuro apunta claramente hacia la adopción de IPv6 como solución definitiva.</p>
+
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/SHbBso63X38?si=JdsmfJJZMW9QG0HI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+  gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</section>
+</p>
+</div>
+  <footer>
+    <p>&copy; 2025 Redes Informáticas | Sitio educativo</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redes Informáticas</title>
+  <link rel="stylesheet" href="styleproyecto.css">
+</head>
+<body>
+  <header>
+    <h2>Redes Informáticas</h2>
+    <nav>
+      <ul>
+        <li><a href="inicio.html">Inicio</a></li>
+        <li><a href="que_es.html">¿Qué es una red?</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="modelos.html">OSI y TCP/IP</a></li>
+        <li><a href="tipos.html">Tipos</a></li>
+        <li><a href="topologias.html">Topologías</a></li>
+        <li><a href="componentes.html">Componentes</a></li>
+        <li><a href="Medios.html">Medios de transmisión</a></li>
+        <li><a href="direccionamiento.html">Direccionamiento IP</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="col1">
+    <p>
+<h1>Modelos OSI y TCP/IP</h1>
+<p>
+Existen diversos protocolos, estándares y modelos que determinan el funcionamiento general de las redes. 
+Destacan el modelo OSI y el TCP/IP. Cada modelo estructura el funcionamiento de una red de manera distinta: El 
+modelo OSI cuenta con 7 capas muy definidas y con funciones diferenciadas y el TCP/IP con 4 capas diferenciadas pero que
+combinan las funciones existentes en las 7 capas del modelo OSI. Los protocolos están repartidos por las diferentes 
+capas pero no están definidos como parte del modelo en sí, sino como entidades diferentes de normativas internacionales, 
+de modo que el modelo OSI no puede ser considerado una arquitectura de red. El modelo de Referencia OSI es una herramienta 
+conceptual que se encarga de la conexión entre sistemas abiertos, esto es, sistemas abiertos a la comunicación con otros 
+sistemas. Los principios en los que basó su creación son,una mayor definición de las funciones de cada capa, evitar 
+agrupar funciones diferentes en la misma capa y una mayor simplificación en el funcionamiento del modelo en general. 
+</p>
+<p>
+<h3>I  N  T  R  A  N  E  T:</h3> Una intranet es una red de ordenadores privados que utiliza tecnología Internet para compartir dentro de 
+una organización parte de sus sistemas de información y sistemas operacionales. 
+</p><img src="img/intranet.jpeg" width="300px" height="300px">
+<p>
+<h3>N  I  C:</h3> Network Interface Card, es un controlador de interfaz de red es un hardware componente que conecta un ordenador 
+a una red informática. El controlador también puede ser denominado como un adaptador de red, o un adaptador de LAN.
+</p> <img src="img/NIC.jpg" width="300px" height="300px">
+<p>
+<h1>Modelo OSI:</h1> Open Systems Interconnection fue creado por la ISO. (International Organization for Standardization). 
+Consta de 7 capas:
+<h3>APLICACIÓN - Transferencia de archivos, intercambio de mensajes</h3>  
+  <ul><p>La Capa de Aplicación es la séptima y última capa del modelo OSI. Se encarga de ofrecer una interfaz directa entre 
+    el usuario y la red, facilitando el acceso a servicios que permiten la comunicación entre dispositivos a través de 
+    internet o de redes locales.</p>
+
+<p>No se trata de las aplicaciones en sí (como Google Chrome o Outlook), sino de los protocolos y servicios que estas 
+aplicaciones utilizan para comunicarse con otras en una red. Es decir, esta capa permite que los programas que usamos 
+puedan enviar y recibir datos correctamente.</p>
+
+<p>En esta capa ocurren funciones como el envío de correos electrónicos, la navegación por páginas web, la descarga de 
+archivos o la conexión remota entre computadoras. Para lograrlo, se utilizan protocolos específicos como HTTP, FTP, SMTP, 
+POP3 y DNS, entre otros.</p></ul><img src="img/aplicacion.webp" width="450px" height="300px">
+
+<h3>PRESENTACIÓN - Representación y formateo de los datos</h3>
+    <ul><p>La función principal de la Capa de Presentación es formatear, codificar y traducir los datos entre la red y la 
+      aplicación. Esta capa se asegura de que los datos recibidos por una aplicación sean comprensibles. También se 
+      encarga de funciones como la compresión de datos (para reducir tamaño) y el cifrado/descifrado de información 
+      (para seguridad). Por ejemplo, cuando ves un video en streaming, esta capa puede encargarse de descomprimir el 
+      archivo y convertirlo a un formato visualizable.</p></ul>
+      <img src="img/presentacion.webp" width="450px" height="300px">
+<h3>SESIÓN - Organización y sincronización del intercambio de datos</h3>
+    <ul><p>La Capa de Sesión se encarga de establecer, mantener y finalizar las sesiones de comunicación entre dos 
+      dispositivos. Una “sesión” es una conexión lógica entre dos sistemas que intercambian datos durante un período de 
+      tiempo. Esta capa permite que múltiples aplicaciones en un mismo dispositivo se comuniquen de forma independiente, 
+      y puede reiniciar la sesión si hay una interrupción. Por ejemplo, en una videollamada, esta capa mantiene la sesión 
+      activa entre los participantes.</p>
+</ul><img src="img/sesion.webp" width="450px" height="300px">
+
+<h3>TRANSPORTE - Canal de transferencia de mesajes de una aplicación a otra</h3>
+    <ul><p>Esta capa asegura que los datos lleguen completos, correctos y en orden desde el origen al destino. Utiliza 
+      protocolos como TCP (que garantiza entrega fiable) o UDP (más rápido pero sin verificación). Divide los datos 
+      grandes en segmentos más pequeños y los reensambla en el destino. También controla cuántos datos se envían a la 
+      vez (control de flujo) y verifica si los datos llegaron bien (control de errores).</p></ul><img src="img/transporte.webp" width="450px" height="300px">
+
+<h3>RED - Direcciones y mejor ruta</h3>
+    <ul><p>La Capa de Red se encarga del direccionamiento y el enrutamiento de los datos, es decir, decide por dónde deben 
+      viajar los paquetes de datos para llegar a su destino. Aquí se usa la dirección IP para identificar a cada 
+      dispositivo. Protocolos como IP, ICMP y ARP operan en esta capa. Es como el GPS de la red: determina la mejor ruta 
+      para cada paquete de datos, incluso si hay múltiples caminos disponibles.</p></ul><img src="img/redes.jpg" width="450px" height="300px">
+
+<h3>ENLACE - Acceso al medio, detección de errores</h3>
+    <ul><p>Esta capa crea una conexión directa entre dos dispositivos en la misma red física. Su función es detectar y 
+      corregir errores de transmisión, además de organizar los datos en tramas (frames). También se encarga de las 
+      direcciones MAC, que identifican de forma única a cada dispositivo. Es fundamental en redes LAN y utiliza 
+      tecnologías como Ethernet o Wi-Fi.</p></ul><img src="img/presentacion.webp" width="450px" height="300px">
+
+<h3>FÍSICA - Transmisión binaria, definiciones electricas y mecánicas del sistema físico</h3>
+<ul><p>La Capa Física es la base del modelo OSI. Se ocupa de la transmisión real de bits a través del medio físico: 
+      <li>Cables de cobre</li>
+      <li>Fibra óptica</li>
+      <li>Ondas de radio, etc</li> 
+      Define aspectos como voltajes, frecuencias, conectores, pines, y la velocidad de transmisión. 
+      En otras palabras, esta capa se asegura de que los unos y ceros lleguen de un dispositivo a otro mediante 
+      impulsos eléctricos, luz o señales inalámbricas.</p></ul><img src="img/fisica.jpg" width="450px" height="300px">
+</p>
+<p>
+<h1>Modelo TCP/IP:</h1> La familia de protocolos de Internet es un conjunto de protocolos de red en los que se basa Internet y que 
+permiten la transmisión de datos entre redes de computadoras. Consta de 5 capas:
+<li>APLICACIÓN</li>
+<li>TRANSPORTE</li>      
+<li>RED</li>
+<li>ENLACE</li>
+<li>FÍSICA</li>
+</p><iframe width="560" height="315" src="https://www.youtube.com/embed/jdKRx2BxSMs?si=r3BdUeHKlmMdVdzE" title="YouTube 
+video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-
+picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+ <p>
+El modelo TCP/IP fue desarrollado antes que OSI. Es más simple y está formado por menos capas. Este modelo es el 
+implantado actualmente a nivel mundial: Fue utilizado en ARPANET y es utilizado actualmente a nivel global en Internet 
+y redes locales. Su nombre deriva de los dos principales protocolos que lo conforman: TCP en la Capa de transporte e IP 
+en la Capa de red.
+</p>
+</p>
+</div>
+  <footer>
+    <p>&copy; 2025 Redes Informáticas | Sitio educativo</p>
+  </footer>
+</body>
+</html>
